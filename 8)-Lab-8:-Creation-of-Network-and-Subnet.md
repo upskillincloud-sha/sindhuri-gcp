@@ -92,6 +92,10 @@
 
 <img width="1836" height="844" alt="image" src="https://github.com/user-attachments/assets/ad65f109-a1e1-4de1-87f6-6f682f7cb9a2" />
 
+21. Click on create VPC.
+
+<img width="1915" height="909" alt="image" src="https://github.com/user-attachments/assets/03310e59-107e-41b7-a8b3-a5c996b85756" />
+<img width="1890" height="892" alt="image" src="https://github.com/user-attachments/assets/6b00713f-cdc3-47ba-96d9-e906f7a3fc6d" />
 
 
 
