@@ -1,5 +1,8 @@
 # Creation of Security list and attaching it to subnet
 
+##Firewall in GCP
+Google Cloud Firewall helps protect your Virtual Private Cloud (VPC) by controlling what network traffic is allowed in or out of your virtual machines (VMs). You can create rules to allow or block specific types of traffic, either for the whole VPC or for individual resources. Google Cloud also offers different firewall tiers, so you can choose the level of security that fits your needs.
+
 ## Steps to Create a Firewall
 
 1. Open Google Cloud Console
