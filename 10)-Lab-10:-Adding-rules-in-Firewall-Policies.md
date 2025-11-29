@@ -1,5 +1,10 @@
 # Adding rules in Firewall
 
+## Firewalls Rules
+1. IN GCP, by default Egress is allowed.
+2. Ingress vs. Egress: You can create both ingress rules (for traffic coming into a resource) and egress rules (for traffic going out).
+3. Filtering: Rules filter traffic based on a combination of source/destination IP address, port, and protocol.
+
 ## Steps to add Filewall Rules
 
 1. Open Google Cloud Console
