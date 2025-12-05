@@ -2,13 +2,19 @@
 
 ## 👤 Users
 - **Definition**: Individual identities that access GCP resources.
+
 - **Types**:
+
   - **Human users**: People logging in with Google accounts (Gmail or Google Workspace).
+
   - **Service accounts**: Non-human identities used by applications or services.
+
 - **IAM Role Assignment**: Permissions are granted to users through IAM roles (e.g., Viewer, Editor, Owner).
+
 - **Example**: Assigning `roles/storage.objectViewer` to a user allows them to read objects in a Cloud Storage bucket.
 
 ### Steps to create Users in GCP
+
 1. Go to admin.google.com
 
 <img width="1883" height="929" alt="image" src="https://github.com/user-attachments/assets/c7896779-ad7e-436a-aa5e-3b82d3d5550b" />
@@ -17,13 +23,17 @@
 
 <img width="1916" height="922" alt="image" src="https://github.com/user-attachments/assets/710b46d4-e8cd-48c8-af39-1365b11a192a" />
 
+
  or click on directory and click on user.
+
 
 <img width="1916" height="970" alt="image" src="https://github.com/user-attachments/assets/a4032230-bffc-4022-bebd-9e8ee2c0fac5" />
 
 <img width="1916" height="970" alt="image" src="https://github.com/user-attachments/assets/af9a4955-8174-48bb-8c34-63d0dfc9ce8d" />
 
+
 3.Enter first name, surname, emailaddress and click on "Continue".
+
 
 <img width="1876" height="872" alt="image" src="https://github.com/user-attachments/assets/02e25dfe-63fd-4544-98a0-9af529af34db" />
 
@@ -34,18 +44,29 @@
 ---
 
 ## 👥 Groups
+
 - **Definition**: Collections of users and/or service accounts managed as a single entity.
+
 - **Purpose**:
+
   - Simplify access management by assigning IAM roles to the group instead of each user.
+
   - Ensure consistent policy enforcement across multiple users.
+
 - **Management**: Groups are created and managed in **Google Cloud Identity** or **Google Workspace Admin Console**.
+
 - **Benefits**:
+
   - Centralized management: One role assignment applies to all group members.
+
   - Scalability: Easily add/remove users without changing IAM policies.
+
   - Security: Apply uniform policies across teams.
+
 - **Example**: A group called *“DevOps Team”* can be granted `roles/compute.admin` so all members can manage Compute Engine resources.
 
 ### Steps to create Groups
+
 1. Open admin.google.com
 
 <img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/f76f5212-e655-4dce-9b03-63960edfbc36" />
@@ -57,9 +78,12 @@
 
 3. Now click on "Create Group".
 
+
 <img width="1911" height="1005" alt="image" src="https://github.com/user-attachments/assets/2e080b74-4edb-4368-a4ef-005ee4f111a3" />
 
+
 4. Create group page is opened. Now fill the details, group name, group emaildescription
+
 
 <img width="1911" height="1005" alt="image" src="https://github.com/user-attachments/assets/f1998e73-cdaf-4994-baa3-92a457d73e0c" />
 
@@ -70,9 +94,11 @@
 <img width="1897" height="962" alt="image" src="https://github.com/user-attachments/assets/2552d0f2-4419-471c-bec2-ff9d222897c6" />
 
 6. Click on Team, click on only invited users.
+
 <img width="753" height="745" alt="image" src="https://github.com/user-attachments/assets/0b149281-1cbe-4258-b43d-5dd8835f68b2" />
 
 7.click on "Create Group" button.
+
 <img width="1899" height="955" alt="image" src="https://github.com/user-attachments/assets/992f854a-f01f-4680-87cd-db05ced9d8fc" />
 
 #### Steps to add members in Group
@@ -124,6 +150,9 @@
 ---
 
 ## ✅ Summary
+
 - **Users** = individual identities (people or service accounts).
+
 - **Groups** = collections of users, used to manage permissions collectively.
+
 - Both are IAM *principals* that can be granted roles to access resources.
