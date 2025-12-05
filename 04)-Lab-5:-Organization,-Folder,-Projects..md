@@ -23,9 +23,11 @@ In Google Cloud Platform (GCP), the Organization, Folders, and Projects create a
 
 
 2. Hover/Click on "IAM and admin".
+
 <img width="1903" height="963" alt="image" src="https://github.com/user-attachments/assets/586e7dbb-341c-40cf-876d-a65436140741" />\
 
 3.Click on Manage resources.
+
 <img width="1903" height="963" alt="image" src="https://github.com/user-attachments/assets/c4577e2d-4651-4a9a-94d4-f2452ee5e521" />
 
 <img width="1910" height="915" alt="image" src="https://github.com/user-attachments/assets/29a15fd1-b1b2-4bfc-94e3-6824da11eb90" />
@@ -39,7 +41,9 @@ In Google Cloud Platform (GCP), the Organization, Folders, and Projects create a
 5. Now new folder creation page will be displayed. Now fill the details
 
 <img width="1911" height="859" alt="image" src="https://github.com/user-attachments/assets/60e24d3d-206d-43cc-b345-c9c81aa19791" />
+
 6. Click on "create".
+
 <img width="1911" height="859" alt="image" src="https://github.com/user-attachments/assets/564fab6b-aeb5-4f56-a1b1-aa3a1e6b5297" />
 
 <img width="1913" height="976" alt="image" src="https://github.com/user-attachments/assets/0bec7898-8e38-46ab-b0a3-45a087fcc439" />
@@ -55,14 +59,17 @@ In Google Cloud Platform (GCP), the Organization, Folders, and Projects create a
 
 ## Steps to Create to Project
 1. Click on Navigational menu/Burger menu.
+
 <img width="1906" height="1025" alt="image" src="https://github.com/user-attachments/assets/805f223d-4e25-4a25-b620-d4067e63f967" />
 <img width="1867" height="978" alt="image" src="https://github.com/user-attachments/assets/54580eb0-290b-4d8f-a335-2ed928b9aa34" />
 
 
 2. Hover/Click on "IAM and admin".
+
 <img width="1903" height="963" alt="image" src="https://github.com/user-attachments/assets/586e7dbb-341c-40cf-876d-a65436140741" />\
 
 3.Click on Manage resources.
+
 <img width="1903" height="963" alt="image" src="https://github.com/user-attachments/assets/c4577e2d-4651-4a9a-94d4-f2452ee5e521" />
 
 <img width="1910" height="915" alt="image" src="https://github.com/user-attachments/assets/29a15fd1-b1b2-4bfc-94e3-6824da11eb90" />
