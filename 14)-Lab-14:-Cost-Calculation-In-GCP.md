@@ -2,7 +2,7 @@
 
 Google Cloud Platform (GCP) calculates costs based on resource usage and pricing models. Each service (Compute Engine, Cloud Storage, BigQuery, etc.) has its own pricing structure, and costs are aggregated at the project or billing account level.
 
-<!---
+
 🔑 Key Components of Cost Calculation
 - Resource Usage:
 - Compute: vCPU hours, memory GB hours.
@@ -22,16 +22,13 @@ Google Cloud Platform (GCP) calculates costs based on resource usage and pricing
 - Select services (Compute, Storage, BigQuery, etc.).
 - Configure usage (region, vCPUs, memory, storage size, network egress).
 - Review estimated monthly cost.
-2. Apply Discounts
-- Add Committed Use Discounts for predictable workloads.
-- Factor in Sustained Use Discounts for long-running VMs.
-- Consider Spot VMs for batch or fault-tolerant jobs.
-3. Review Billing Reports
+
+2. Review Billing Reports
 - Go to Billing → Reports in the Cloud Console.
 - Filter by labels (e.g., env=prod, team=finance) to break down costs.
 - Export data to BigQuery for advanced analysis.
 
- --->
+
 
 
 
