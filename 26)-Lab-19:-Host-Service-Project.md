@@ -13,7 +13,7 @@ Service Project: The "Consumer" of the network. These projects are attached to t
 
 * Deploy Resources: In the Service Project, when creating a VM, select the "Shared VPC".
 
-### Steps to Create Shared VPC networks( Host project: Hub-Network-project; Service Project: Hub-ComputeAndStorage-Project)
+## Steps to Create Shared VPC networks( Host project: Hub-Network-project; Service Project: Hub-ComputeAndStorage-Project)
 
 1. In Project Picker, Select Hub-Network-project(we have created a VPC in this project already).
 
