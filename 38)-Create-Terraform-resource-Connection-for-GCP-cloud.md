@@ -52,4 +52,44 @@
 
 <img width="1629" height="771" alt="image" src="https://github.com/user-attachments/assets/ccccd62c-45b2-47bc-8bc1-f1fc012fa30e" />
 
+<img width="1902" height="984" alt="image" src="https://github.com/user-attachments/assets/1e23fd42-ab41-4460-8a49-b129cf7b333c" />
 
+9. Now save the above json in s folder and give the path of key in the provider.tf as credentials.
+
+<img width="1644" height="798" alt="image" src="https://github.com/user-attachments/assets/951c5aa2-a5ed-4e1d-b176-e70db8373ab0" />
+
+10. Now we need to give access to the sa user which we have created earlier to create folder and project.
+
+11. Click on Navigational Menu. Click on view products. click on API and services. Click on Library.
+
+<img width="1792" height="1022" alt="image" src="https://github.com/user-attachments/assets/6a7ec9e5-0bbb-4888-ab33-17920cbdc1e8" />
+
+<img width="1686" height="985" alt="image" src="https://github.com/user-attachments/assets/bb68ccb5-f43d-4ad2-bdf7-71dd9f79e516" />
+
+<img width="1902" height="1002" alt="image" src="https://github.com/user-attachments/assets/b4ceab20-e155-4fda-9033-8e2138184245" />
+
+12. In Search bar, search cloud resource manager api. click on cloud resource manager api. click on enable.
+
+<img width="1897" height="913" alt="image" src="https://github.com/user-attachments/assets/c09c0d1b-53d8-4cf8-a8ed-3a254d5b201c" />
+
+<img width="1905" height="900" alt="image" src="https://github.com/user-attachments/assets/48b34205-0dff-4925-a498-8e362b9afdb3" />
+
+<img width="1896" height="900" alt="image" src="https://github.com/user-attachments/assets/20594730-94dd-4cc9-b30a-8a4254bbcc17" />
+
+<img width="1867" height="872" alt="image" src="https://github.com/user-attachments/assets/be6bfd1a-26b3-464a-830a-09c36bcca61c" />
+
+13. Now we need to give the sa user roles at orginational level to create resources, projects.
+
+14. Select organization in project picker.
+
+<img width="1907" height="951" alt="image" src="https://github.com/user-attachments/assets/745e9a56-2b25-49d0-83be-5a31cb3f8fac" />
+
+15.Click on Navigational Menu. CLick on IAM & Admin. click on IAM. click on grant access. Give the sauser email. give the appropriate role. click on Save.
+
+<img width="1873" height="951" alt="image" src="https://github.com/user-attachments/assets/68fec89f-cfaf-4592-a66e-a33f738e4a30" />
+
+<img width="1905" height="958" alt="image" src="https://github.com/user-attachments/assets/b56f3978-79cc-4a03-aa3f-f500235ed141" />
+
+
+
+ 
