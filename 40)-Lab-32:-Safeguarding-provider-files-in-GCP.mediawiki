@@ -1,1 +1,165 @@
+🛡️ Safeguarding GCP Infrastructure with Terraform
+This documentation outlines the standards for managing Google Cloud Service Account credentials securely using .env, variables.tf, and provider.tf.
+
+1. Objective: The "Least Privilege" Principle
+
+The primary objective for GCP safeguarding is to protect the Service Account Key.
+
+Key Protection: Service Account keys are powerful JSON files; if leaked, they provide full access to your project.
+
+Path Referencing: We store the path to the key in an environment variable, not the key's content in the code.
+
+Identity Isolation: Ensures the "Editor" or "Owner" permissions are only active during the Terraform execution.
+
+2. Why We Use These Files
+
+📂 .env (The Path Controller)
+
+In GCP, we often point to a local file path.
+The .env file exports this path so Terraform knows where to find the "passport" (JSON key) for Google Cloud.
+
+📂 variables.tf (The Blueprint)
+
+This file defines the project-specific variables such as project_id and region. 
+It ensures your code isn't hardcoded to one specific GCP project.
+
+📂 provider.tf (The Bridge)
+
+This file connects to the Google API. 
+It uses the variables to define where to build resources and how to authenticate.
+
+3. Implementation & Code Syntax
+
+📂 File 1: .env
+
+Note: Ensure your Service Account JSON file is also added to .gitignore.
+
+# .env - DO NOT COMMIT TO GIT
+
+export TF_VAR_project_id="your-gcp-project-id"
+
+export TF_VAR_region="us-central1"
+
+export TF_VAR_gcp_auth_file="/path/to/your/service-account-key.json"
+
+# Best Practice: Also set the standard Google Variable
+
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-key.json"
+
+📂 File 2: variables.tf
+
+variable "project_id" {
+  description = "The ID of the GCP Project"
+  type        = string
+}
+
+variable "region" {
+  description = "The default region for resources"
+  type        = string
+  default     = "us-central1"
+}
+
+variable "gcp_auth_file" {
+  description = "Path to the Service Account JSON key"
+  type        = string
+}
+
+📂 File 3: provider.tf
+provider "google" {
+  project     = var.project_id
+  region      = var.region
+  credentials = file(var.gcp_auth_file)
+}
+
+4. How to Connect the Files (The Workflow)
+
+Load Environment:
+
+source .env
+
+Plan:
+
+terraform plan
+
+⚠️ Critical Security Step
+
+Your .gitignore must be strict to prevent JSON key leakage:
+
+
+# Ignore the environment file
+.env
+
+# Ignore all Google JSON keys
+*.json
+
+# Ignore Terraform internal files
+.terraform/
+*.tfstate
+
+
+Seucrity Question:
+
+Q) If the .json key path is already hidden inside the .gitignore-ed .env file, why must we also explicitly ignore *.json files?
+
+A) While it may seem redundant, ignoring both is a "Defense in Depth" strategy. Here is the technical breakdown of why this is a best practice:
+
+1. Separating the "Map" from the "Treasure"
+
+The .env file is just a "Map": It contains the text-based path (the address) where your key is stored on your hard drive.
+
+The .json file is the "Treasure": This is the actual physical file containing your private RSA keys.
+
+The Risk: If you only ignore the .env file, Git is still free to track any other file in your folder. 
+If you accidentally move your gcpKey.json into your project directory to make it "easier to find," Git will see it as a new untracked file and include it in your next git add . command.
+
+2. Preventing Human Error (The "Accidental Add")Developers often use the command git add . to stage all changes. 
+Without *.json in your .gitignore, a service account key sitting in your root folder will be staged and committed immediately. 
+Once a key is pushed to a remote repository, it is considered compromised—even if you delete it in a later commit, it remains in the Git History.
+
+3. Protection Against Local ScriptsSome automated tools or scripts might generate temporary JSON outputs or logs containing sensitive data. A wildcard ignore like *.json acts as a safety net that catches these files before they ever leave your machine.
+
+<img width="1019" height="257" alt="image" src="https://github.com/user-attachments/assets/3c483e51-b73c-4d83-8588-8f8ec7308264" />
+
+
+# 1. Ignore the environment variable loader (The Map)
+.env
+
+# 2. Ignore all Service Account Key files (The Treasure)
+# This prevents accidental uploads if keys are moved into this folder.
+*.json
+
+# 3. Ignore Terraform specific files
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+
+
+example .env
+
 <img width="1824" height="948" alt="image" src="https://github.com/user-attachments/assets/a2849ec8-3474-4c06-befb-585f01d2457a" />
+
+example variable.tf
+
+<img width="1765" height="937" alt="image" src="https://github.com/user-attachments/assets/209077fa-8b46-4711-8a0b-4c9c8bf3d06f" />
+
+example provider.tf
+
+<img width="1901" height="961" alt="image" src="https://github.com/user-attachments/assets/37c31e94-cdd6-45ba-a042-524e10244957" />
+
+source .env
+
+Before executing source .env
+
+<img width="1831" height="939" alt="image" src="https://github.com/user-attachments/assets/cfa99d3a-066a-48bc-92ed-26d1b97a89b3" />
+
+Execute source .env and execute echo( executing echo just to see if the values are pulling or not it is not mandatory step)
+
+
+<img width="1841" height="990" alt="image" src="https://github.com/user-attachments/assets/6a7d47c0-1138-48c0-b4fb-9a1575adce27" />
+
+Execute terraform plan
+
+<img width="1816" height="970" alt="image" src="https://github.com/user-attachments/assets/c5aa72a5-ed2b-4890-bb11-b623d95c55fd" />
+
+
