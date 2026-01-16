@@ -1,9 +1,6 @@
 🛡️ Safeguarding Azure Infrastructure with Terraform
 This guide explains the secure management of credentials using the Three-File Architecture: .env, variables.tf, and provider.tf.
 
-🛡️ Safeguarding Azure Infrastructure with Terraform
-This guide explains the secure management of credentials using the Three-File Architecture: .env, variables.tf, and provider.tf.
-
 1. Objective: The "Secret Separation" Principle
 The primary objective is Separation of Concerns. By isolating secrets from the logic, we ensure that:
 
