@@ -12,35 +12,6 @@ Skillup Server
 
 <img width="1891" height="953" alt="image" src="https://github.com/user-attachments/assets/80882c1e-05e2-4d1a-9f46-26fd45ebe4eb" />
 
-## Make VM as NVA
-
-* Log in to the server.
-* Now give the below commands to make the VM as NVA.
-* sudo sysctl -w net.ipv4.ip_forward=1
-* Make it permanent across reboots:
-echo &quot;net.ipv4.ip_forward = 1&quot; | sudo tee -a /etc/sysctl.conf
-* Verify it&#39;s enabled:
-cat /proc/sys/net/ipv4/ip_forward
-Should output: 1
-
-### Configure iptables on Hub-VM
-Still on Hub-VM (same SSH session), run these commands:
-1. Accept forwarding from Spoke to Spoke2:
-sudo iptables -A FORWARD -s 172.17.0.0/24 -d 172.18.0.0/24 -j ACCEPT
-2. Accept forwarding from Spoke2 to Spoke:
-sudo iptables -A FORWARD -s 172.18.0.0/24 -d 172.17.0.0/24 -j ACCEPT
-3. Allow established connections:
-sudo iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
-4. First we have to update the package list:
-sudo apt-get update
-5. Install iptables-persistent to save rules:
-sudo apt-get install iptables-persistent -y
-When prompted during installation:
-&quot;Save current IPv4 rules?&quot; → Select Yes (press Tab to highlight Yes, then Enter)
-&quot;Save current IPv6 rules?&quot; → Select Yes
-6. Save the iptables rules:
-sudo netfilter-persistent save
-
 ## VPC Network Peering
 
 ### Hub network project to Flip Network project
