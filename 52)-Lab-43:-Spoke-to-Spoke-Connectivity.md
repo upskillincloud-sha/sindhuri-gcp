@@ -91,8 +91,16 @@ Click on create.
 <img width="1896" height="986" alt="image" src="https://github.com/user-attachments/assets/41e20615-c19d-45d3-9ddd-e588be688f3f" />
 
 
+
 2.Click on connectivity tests.
 
 <img width="1919" height="984" alt="image" src="https://github.com/user-attachments/assets/1018c021-c96f-442a-b222-88d9630aa8fa" />
  
+Click on create connectivity test
+
+<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/5f719d64-0f19-4202-bcc0-0144551a07f8" />
+
+Click on create.
+
+
 
