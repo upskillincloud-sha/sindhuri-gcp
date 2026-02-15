@@ -129,10 +129,10 @@ The above connectivity test says the traffic could be sent. it didn't really con
 3. Follow the below steps and configure ip tables in NVA.
 
 * Accept forwarding from Spoke to Spoke2:
-sudo iptables -A FORWARD -s 172.17.0.0/24 -d 172.18.0.0/24 -j ACCEPT
+sudo iptables -A FORWARD -s 192.168.2.0/24 -d 192.168.3.0/24 -j ACCEPT
 
 * Accept forwarding from Spoke2 to Spoke:
-sudo iptables -A FORWARD -s 172.18.0.0/24 -d 172.17.0.0/24 -j ACCEPT
+sudo iptables -A FORWARD -s 192.168.3.0/24 -d 192.168.2.0/24 -j ACCEPT
 
 * Allow established connections:
 sudo iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
