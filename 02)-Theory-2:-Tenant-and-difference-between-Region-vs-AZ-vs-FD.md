@@ -1,73 +1,94 @@
-# Tenant and difference between Region vs AZ vs FD
-## Tenant
-* A tenant in Azure represents a dedicated and trusted instance of Azure Active Directory (Azure AD) that your organization receives when it signs up for Microsoft cloud services (like Azure, Microsoft 365, or Dynamics 365).
+# Organization and difference between Region vs AZ vs FD
 
-* Each tenant is unique to an organization.
+## 1. Organization
 
-* It includes the user directory, domain(s), and identity management for that organization.
+An Organization represents the company or enterprise account in GCP.
 
-* Tenancy is about logical isolation — your resources, users, and data are isolated from other tenants, even though they share Microsoft’s global infrastructure.
+### Characteristics
 
-### Directory 
-A directory is a container for objects such as users, groups, and applications, and is used to manage access to resources in Azure. A directory is also associated with a unique directory ID, which is a GUID that identifies the directory in Azure AD.
+* Root-level container for all resources
 
-### Domain
-A domain is a name that identifies a group of resources on the internet, such as a website or an email server. In Azure, a domain is used to verify ownership of a custom domain name and to create user names and email addresses for users in a tenant. A domain can be associated with one or more tenants, and each tenant can have multiple domains.
+* Linked to corporate identity domain
 
+* Controls billing and policies
 
+* Contains folders and projects
 
-## 🌍 Azure Region
+### Usage
 
-An Azure Region is a geographical area that contains one or more datacenters connected through a low-latency network.
-### Examples
+* Used by enterprises to centrally manage users, projects, and policies.
 
-* East US
+## 2. Project
 
-* West Europe
+A Project is the primary working container where resources are created.
 
-* Southeast Asia
+### Characteristics
 
-### Each region provides:
+* All resources belong to a project
 
-* Physical location for your resources.
+* Billing is tracked at project level
 
-* Regional redundancy options.
+* Permissions are often assigned per project
 
-* Compliance with local data residency laws.
+* Projects isolate environments or workloads
 
-* You choose a region when deploying most Azure resources (VMs, storage accounts, etc.).
+### Example Uses
 
-## 🧩 Availability Zone (AZ)
+* Production project
 
-* An Availability Zone is a physically separate datacenter within a region, each with its own power, cooling, and networking.
+* Development project
 
-* Each region typically has 3 Availability Zones (AZs), e.g., 1, 2, 3.
+* Testing project
 
-* They are connected by high-speed, low-latency fiber links.
+## 3. Region
 
-* Using AZs helps you achieve high availability and fault tolerance within the same region.
+A Region is a geographic location where GCP hosts data centers.
+
+## Characteristics
+
+* Each region contains multiple zones
+
+* Regions are geographically separated
+
+* Used for latency and disaster recovery planning
+
+### Example Regions
+
+* asia-south1 (Mumbai)
+
+* us-central1
+
+* europe-west1
+
+## 4. Zone (Equivalent to Availability Domain)
+
+A Zone is a deployment area within a region.
+
+### Characteristics
+
+* Independent infrastructure within a region
+
+* Used to deploy compute resources
+
+* Regions typically contain multiple zones
 
 ### Example
 
-Deploying VMs across AZ1, AZ2, and AZ3 in East US ensures that if one datacenter fails, your application remains available in the others.
+Region: asia-south1
+Zones:
 
-## ⚙️ Fault Domain (FD)
+* asia-south1-a
 
-* A Fault Domain represents a logical group of hardware within an Azure datacenter that shares a common power source and network switch.
+* asia-south1-b
 
-* Fault domains are about physical separation within a single datacenter.
+* asia-south1-c
 
-* Azure automatically distributes your VMs across multiple FDs (usually up to 3) when you use an Availability Set.
+Fault Domain in GCP
 
-* This minimizes the impact of hardware failures, power interruptions, or network issues.
+* GCP does not expose fault domains. Hardware fault isolation is handled automatically, and users achieve availability by deploying across zones.
 
+Explanation
 
-### In short:
+* Hardware fault separation is automatically managed by Google.
 
-Tenant = your organization’s identity boundary.
-
-Region = where your resources live geographically.
-
-Availability Zone (AZ) = separate datacenters in one region.
-
-Fault Domain (FD) = hardware clusters within one datacenter.
+* Users deploy across zones for availability instead of selecting fault domains.
