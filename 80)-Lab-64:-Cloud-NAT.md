@@ -61,3 +61,23 @@ No unsolicited inbound: Cloud NAT cannot be used to host public-facing services.
 4. Fill the Gateway Name. NAT type as Public since we need to communicate with internet.
 5. In Select Cloud reouter section, Select the VPC in Network,Region( must be same region as VM), Click on Create New Cloud Router. 
 
+<img width="1411" height="1017" alt="image" src="https://github.com/user-attachments/assets/8b6023c0-8c02-4cbc-937f-a899668c1810" />
+<img width="1255" height="1019" alt="image" src="https://github.com/user-attachments/assets/5d88cd92-4184-4f38-8bcc-bad74d8913a7" />
+
+6. Click on Create.
+<img width="1646" height="901" alt="image" src="https://github.com/user-attachments/assets/a6d4c7ab-df16-4fb2-8562-f57d5b02fd37" />
+<img width="984" height="918" alt="image" src="https://github.com/user-attachments/assets/faef0c0a-20db-4a8b-a7c7-53e4fe887a08" />
+
+7. Now install again httpd service.
+
+```
+sudo apt install apache2 -y
+```
+<img width="1540" height="872" alt="image" src="https://github.com/user-attachments/assets/842e62e5-a2f0-40ea-ba56-c16fba1c2297" />
+
+8. Check the status of the service.
+```
+sudo systemctl status apache2
+
+```  
+<img width="1047" height="351" alt="image" src="https://github.com/user-attachments/assets/348655a8-1c66-4e41-8b81-78d8e0554a38" />
