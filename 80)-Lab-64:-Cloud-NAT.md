@@ -49,3 +49,15 @@ No unsolicited inbound: Cloud NAT cannot be used to host public-facing services.
 
 ## Steps to Create Cloud NAT
 
+1. Login to GCP (console.cloud.google.com).
+2. Go to Network Services. Click on Cloud NAT. Select Project.
+
+<img width="1631" height="792" alt="image" src="https://github.com/user-attachments/assets/c7522ee7-bfdc-4eb2-9466-6dc11df2c7db" />
+
+3. Click on Get Started.
+
+<img width="1803" height="911" alt="image" src="https://github.com/user-attachments/assets/97b866f7-926b-4742-bb34-1db76d4b1739" />
+
+4. Fill the Gateway Name. NAT type as Public since we need to communicate with internet.
+5. In Select Cloud reouter section, Select the VPC in Network,Region( must be same region as VM), Click on Create New Cloud Router. 
+
