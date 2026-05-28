@@ -114,4 +114,52 @@ Ask Darsh on this?
 
 * SSH into the VM
 
+<img width="607" height="485" alt="image" src="https://github.com/user-attachments/assets/0d96d2a3-0ff1-4c47-9c4d-20239191e9c7" />
+
+* Open the Flip-app-subnet in Flip_VPC network. Private Google access is off. { Private google access is similar to service gateway in OCI. Private network connection to services in GCP}
+
+<img width="1500" height="962" alt="image" src="https://github.com/user-attachments/assets/5b70fa7f-37ce-4317-ab80-a6516589d86b" />
+
+* Execute Command in VM
+```
+gcloud storage ls gs://bucketname/
+```
+
+<img width="720" height="803" alt="image" src="https://github.com/user-attachments/assets/422bcb88-fd16-417e-8b3d-b16abcea8ee8" />
+
+* The VM is unable to access the bucket. VM is private and also Bucket is private.
+
+* Now enable the Private Google Access in the subnet. 
+
+<img width="1350" height="912" alt="image" src="https://github.com/user-attachments/assets/d337d3e3-36c7-4b6f-b951-ef90fed5fa86" />
+
+* Now try the same command in the VM.
+
+Still I cannot login into the bucket.
+<img width="1066" height="661" alt="image" src="https://github.com/user-attachments/assets/cdf337ce-d0e7-40d4-a5cd-79a75a6b629b" />
+
+* IAM Role is missing. Lets try adding it.
+* Click on IAM -> Service accounts.
+<img width="1911" height="788" alt="image" src="https://github.com/user-attachments/assets/f43b0c5d-d5b0-48e1-a154-e8606c3a3b48" />
+
+* Open the Service account. Click on Permissions. Click on Manage Access.
+
+<img width="1821" height="896" alt="image" src="https://github.com/user-attachments/assets/4ac9ee36-b999-4573-b76e-fbf7caaa81dd" />
+
+<img width="1907" height="1012" alt="image" src="https://github.com/user-attachments/assets/b25fd00b-a76c-486b-87d7-ecbf29a71fe0" />
+
+* Click on Add Role. Assign Storage Object user role. Save it.
+
+<img width="1918" height="945" alt="image" src="https://github.com/user-attachments/assets/197ed46c-79df-4070-918a-e6a615668854" />
+
+*  Try again the command.
+<img width="1101" height="887" alt="image" src="https://github.com/user-attachments/assets/b584f586-c61d-4be6-b8d4-7a2cf4e4fc43" />
+
+
+
+
+
+
+
+
 
