@@ -154,8 +154,29 @@ Still I cannot login into the bucket.
 
 *  Try again the command.
 <img width="1101" height="887" alt="image" src="https://github.com/user-attachments/assets/b584f586-c61d-4be6-b8d4-7a2cf4e4fc43" />
+* the issue is VM is created ion US Central.I have enable PGA access in Flipapp-subnet which is in US east 1. But the VM is created in US central and it is not enabled in the default subnet.
+
+* Created another VM in US east 1 region. SSH into the VM and execute the gcloud ls command. It displays list of files in the bucket.
+
+<img width="1083" height="762" alt="image" src="https://github.com/user-attachments/assets/54df68c4-d066-42bb-857d-77ac895e5a3d" />
 
 
+* To Copy or upload files.
+```
+gcloud storage cp test.txt gs://flipapp-bucket
+
+```
+<img width="963" height="708" alt="image" src="https://github.com/user-attachments/assets/9060c1a6-9b61-4cf1-bc67-c23becb9e5c2" />
+<img width="1632" height="658" alt="image" src="https://github.com/user-attachments/assets/e2bce2aa-eed5-48a0-8b93-d184b21b8c67" />
+
+IAM Permissions are there for the service account. 
+AI is saying the issue is with VMs cloud API access scope. Here it is default access. It is asking to give full access. It says it not an issue it gives full control to IAM.
+
+<img width="1907" height="1017" alt="image" src="https://github.com/user-attachments/assets/d8ab93c4-8c35-40db-97b1-9d0feb037fbd" />
+
+* So stop the VM< and Edit the access and try to copy files into storage bucket.
+
+Right now i cannot edit it try tomorrow
 
 
 
