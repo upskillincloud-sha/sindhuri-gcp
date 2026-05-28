@@ -174,9 +174,20 @@ AI is saying the issue is with VMs cloud API access scope. Here it is default ac
 
 <img width="1907" height="1017" alt="image" src="https://github.com/user-attachments/assets/d8ab93c4-8c35-40db-97b1-9d0feb037fbd" />
 
-* So stop the VM< and Edit the access and try to copy files into storage bucket.
+* So stop the VM and Edit the access and try to copy files into storage bucket.
+Due do some reson i am junable to edit the instance. So created a new instance in same region with full access to cloud APIs.
 
-Right now i cannot edit it try tomorrow
+<img width="1801" height="1022" alt="image" src="https://github.com/user-attachments/assets/d60b3e43-3c6e-42c3-95d1-8d977fd709cd" />
+
+* Now SSH to the VM, create a file and copy it tp bucket.
+
+<img width="1112" height="668" alt="image" src="https://github.com/user-attachments/assets/1fbc7715-1657-4ca6-8d68-c2ea8839f201" />
+
+Successfully uploaded file into the bucket lets check it in console.
+<img width="1707" height="862" alt="image" src="https://github.com/user-attachments/assets/79037f83-e84f-4474-b6a9-11bbf94522c7" />
+<img width="1010" height="737" alt="image" src="https://github.com/user-attachments/assets/0f47502f-81bc-48ba-b661-0488c7368248" />
+
+
 
 
 
