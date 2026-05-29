@@ -39,4 +39,50 @@
 <img width="836" height="520" alt="image" src="https://github.com/user-attachments/assets/42dcc04a-4ee2-4607-9a4d-8423def27102" />
 <img width="1077" height="812" alt="image" src="https://github.com/user-attachments/assets/85637f07-a78a-4772-86bf-ffbbcfcf6d31" />
 
+* When Service Networking is enabled for Flip-VPC, then check in the VPC networks of Flip-vpc, in private services access.
+
+<img width="1907" height="956" alt="image" src="https://github.com/user-attachments/assets/b0f0ffb1-5ccc-4417-987b-4644debf1dff" />
+
+* Click on VPC Network peering in Flip-vpc.
+
+Create Cloud SQL instance:
+* Click on Create instance.
+
+<img width="1917" height="775" alt="image" src="https://github.com/user-attachments/assets/6c0e76ae-7502-4be0-9b1b-6c0543f9464b" />
+
+* Choose MySQL. Enter Instance ID, passwork and select region.
+
+<img width="1386" height="1011" alt="image" src="https://github.com/user-attachments/assets/69d3a0e3-eb50-4553-8b88-74ea7952632a" />
+
+* Cutomise your instance
+
+<img width="1487" height="1002" alt="image" src="https://github.com/user-attachments/assets/eed7da26-b454-43a1-88a5-4f22def22f75" />
+
+<img width="1482" height="987" alt="image" src="https://github.com/user-attachments/assets/04b6e696-bb5b-417e-aa4c-913519edc0c6" />
+
+* In Connections Public IP is enabled. Disable public IP
+
+<img width="1403" height="996" alt="image" src="https://github.com/user-attachments/assets/65701888-a9f6-494a-97a0-22c8611994a3" />
+
+<img width="1505" height="991" alt="image" src="https://github.com/user-attachments/assets/65bda757-ecef-4bdd-abf7-b9b5571acd22" />
+
+* click on Create Instance.
+<img width="1530" height="933" alt="image" src="https://github.com/user-attachments/assets/f00b4cb8-a4c6-443d-805e-6e022b5888dc" />
+
+* Enable Service Networking API.
+<img width="1913" height="946" alt="image" src="https://github.com/user-attachments/assets/70737fdc-fd48-4bea-aeec-628b37fb51b6" />
+<img width="1882" height="946" alt="image" src="https://github.com/user-attachments/assets/895bc041-65ad-462e-bc4c-5cabfd870ee6" />
+
+* Click on Create instance.
+<img width="1507" height="1047" alt="image" src="https://github.com/user-attachments/assets/6a45108d-fa5e-47d9-9d97-b6e1565ee475" />
+
+<img width="1358" height="906" alt="image" src="https://github.com/user-attachments/assets/f6ca60e4-899b-4e85-a9eb-a233c8f0115d" />
+
+* Flip-VPC -> Private Service Access.
+
+<img width="1812" height="936" alt="image" src="https://github.com/user-attachments/assets/7d655302-bb19-4108-85e0-0d1e95608a94" />
+
+<img width="1836" height="971" alt="image" src="https://github.com/user-attachments/assets/1c76445b-aaf1-44e2-9245-92774f789ed9" />
+
+## Private Service Connect
 
