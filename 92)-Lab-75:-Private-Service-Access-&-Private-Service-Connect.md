@@ -84,6 +84,13 @@ Create Cloud SQL instance:
 
 <img width="1836" height="971" alt="image" src="https://github.com/user-attachments/assets/1c76445b-aaf1-44e2-9245-92774f789ed9" />
 
+Flip_compute and Storage:
+
+<img width="982" height="626" alt="image" src="https://github.com/user-attachments/assets/fa044d3a-ec33-4aa3-a2b5-535e7fd4913d" />
+
+API KEY:
+AIzaSyDqGsHcprwOT72nchW9BxpuPVm5C8dLO7k
+
 ## Private Service Connect
 
 * Create instance in Cloud SQL. Click on Icreate instance and Click on MySQL.
