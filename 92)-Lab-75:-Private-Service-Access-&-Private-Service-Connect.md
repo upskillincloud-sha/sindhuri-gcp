@@ -86,3 +86,35 @@ Create Cloud SQL instance:
 
 ## Private Service Connect
 
+* Create instance in Cloud SQL. Click on Icreate instance and Click on MySQL.
+
+<img width="1882" height="915" alt="image" src="https://github.com/user-attachments/assets/ceac3e53-489f-4560-b4e6-f1131247bbb6" />
+
+* Click on Enable 
+<img width="1912" height="1001" alt="image" src="https://github.com/user-attachments/assets/06891af7-b57a-46d0-ae54-940ef976109e" />
+<img width="1695" height="1002" alt="image" src="https://github.com/user-attachments/assets/22397f6d-717f-4854-a447-4ab923bcc616" />
+
+* Disable public Ip and Enable Private IP. Choose private connection method as PSC.
+
+<img width="1751" height="1026" alt="image" src="https://github.com/user-attachments/assets/37236ee8-a03e-483d-a769-126847a08f05" />
+
+* Add an Endpoint. Choose Project and select the VPC. Click on check policy.
+
+<img width="542" height="288" alt="image" src="https://github.com/user-attachments/assets/f645f0de-e05a-457e-b754-170079043432" />
+<img width="1042" height="665" alt="image" src="https://github.com/user-attachments/assets/1febfe3f-b954-44ae-8f21-7c7df187afdd" />
+
+* Click on Create Policy.
+<img width="1912" height="1020" alt="image" src="https://github.com/user-attachments/assets/48aa9158-0466-47c1-abae-940048611889" />
+<img width="1912" height="995" alt="image" src="https://github.com/user-attachments/assets/8b194876-1097-4663-b999-c9e6aec31807" />
+
+* Click on Create Policy.
+
+* Do we enable Data API and Enable Private path?
+<img width="1876" height="1007" alt="image" src="https://github.com/user-attachments/assets/ba54c568-aa15-4193-9447-75ed4ae8a213" />
+
+* Click on Create Instance.
+<img width="1918" height="1005" alt="image" src="https://github.com/user-attachments/assets/6d5a6935-c44f-45ed-87b4-d385230047aa" />
+
+* Error End point is not created.
+<img width="1917" height="1015" alt="image" src="https://github.com/user-attachments/assets/b4e45a58-40d7-4835-96c4-c095a48bb62f" />
+
